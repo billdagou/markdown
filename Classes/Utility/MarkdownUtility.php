@@ -8,6 +8,7 @@ class MarkdownUtility {
      * @return string
      */
     public static function parse(string $markdown): string {
-        return (new \Parsedown())->text($markdown);
+        return (new \Parsedown())->setSafeMode(TRUE)
+            ->text($markdown);
     }
 }
