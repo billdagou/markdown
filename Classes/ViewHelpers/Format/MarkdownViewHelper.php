@@ -6,6 +6,9 @@ use TYPO3Fluid\Fluid\Core\Rendering\RenderingContextInterface;
 use TYPO3Fluid\Fluid\Core\ViewHelper\AbstractViewHelper;
 
 class MarkdownViewHelper extends AbstractViewHelper {
+    protected $escapeChildren = FALSE;
+    protected $escapeOutput = FALSE;
+
     /**
      * @param array $arguments
      * @param \Closure $renderChildrenClosure
